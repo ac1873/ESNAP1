@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 105px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+header {
+    text-align: center;
+}
+
+.searchbar {
+    text-align: center;
+    background-color: #a6a3a3;
+    padding: 5px;
+}
+
+.cardContainer {
+    margin: 10px;
+    margin-left: 110px;
+    margin-top: 50px;
+}
+
+.productCards {
+    text-align: center;
+    padding: 50px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+
+.content1 {
+    padding: 15px;
+}
+
+.productListing {
+    text-align: center;
+    min-height: 100px;
+    /* box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5); */
+    border-radius: 7px;
+    margin-top: 7px;
+}
+
+.itemImageBox {
+    border-radius: 7px;
+    width: 75px;
+    height: 75px;
+    margin-bottom: 12px;
+}
+
+.productMainImage {
+    text-align: center;
+    padding: 50px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    min-height: 350px;
+}
+
+.prodDescription {
+    text-align: center;
+}
