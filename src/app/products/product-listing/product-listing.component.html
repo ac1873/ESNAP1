@@ -1,5 +1,5 @@
 <div class="searchbar justify-content-center">
-    <div class="input-group justify-content-center">
+    <!-- <div class="input-group justify-content-center">
         <div id="search-autocomplete" class="form-outline">
             <input type="search" id="form1" class="form-control" />
             <label class="form-label" for="form1">Search</label>
@@ -7,6 +7,22 @@
         <button type="button" class="btn btn-primary">
           <i class="fas fa-search"></i>
         </button>
+    </div> -->
+    <div class="input-group justify-content-center">
+
+        <div class="ng-autocomplete">
+            <ng-autocomplete [data]="data" [searchKeyword]="keyword" placeholder="Search Item" (selected)='selectEvent($event)' (closed)="autoCompleteClose()" (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' [itemTemplate]="itemTemplate"
+                [notFoundTemplate]="notFoundTemplate">
+            </ng-autocomplete>
+
+            <ng-template #itemTemplate let-item>
+                <a [innerHTML]="item.productName"></a>
+            </ng-template>
+
+            <ng-template #notFoundTemplate let-notFound>
+                <div [innerHTML]="notFound"></div>
+            </ng-template>
+        </div>
     </div>
 </div>
 
