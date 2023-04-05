@@ -8,7 +8,8 @@
     background: #eee;
 }
 
-.h-custom {
+
+/* .h-custom {
     height: calc(100% - 105px);
 }
 
@@ -16,11 +17,7 @@
     .h-custom {
         height: 100%;
     }
-}
-
-header {
-    text-align: center;
-}
+} */
 
 .searchbar {
     text-align: center;
@@ -41,9 +38,10 @@ header {
     border-radius: 7px;
 }
 
-.content1 {
+
+/* .content1 {
     padding: 15px;
-}
+} */
 
 .productListing {
     text-align: center;
@@ -71,5 +69,35 @@ header {
 .prodDescription {
     text-align: center;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+header {
+    text-align: center;
+    min-height: 70px;
+}
+
+.container {
+    min-height: 100%;
+}
+
+.content {
+    overflow: auto;
+    padding-bottom: 170px;
+    height: 100%;
+    background-color: rgb(248 248 245);
+}
+
+.footer {
+    height: 100px;
+    position: relative;
+    margin-top: -100px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

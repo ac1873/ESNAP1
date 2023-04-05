@@ -6,11 +6,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AutocompleteLibModule } from 'angular-ng-autocomplete';
 import { MatInputModule } from '@angular/material/input';
+import { TilesDashboardComponent } from './tiles-dashboard/tiles-dashboard.component';
+import { SearchResultDashboardComponent } from './search-result-dashboard/search-result-dashboard.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    TilesDashboardComponent,
+    SearchResultDashboardComponent
   ],
   imports: [
     CommonModule,

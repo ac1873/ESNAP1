@@ -1,50 +1,15 @@
 <div class="searchbar justify-content-center">
     <div class="input-group justify-content-center">
-
-        <div class="ng-autocomplete">
-            <ng-autocomplete [data]="data" [searchKeyword]="keyword" placeholder="Search Item" (selected)='selectEvent($event)' (closed)="autoCompleteClose()" (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' [itemTemplate]="itemTemplate"
-                [notFoundTemplate]="notFoundTemplate">
-            </ng-autocomplete>
-
-            <ng-template #itemTemplate let-item>
-                <a [innerHTML]="item.productName"></a>
-            </ng-template>
-
-            <ng-template #notFoundTemplate let-notFound>
-                <div [innerHTML]="notFound"></div>
-            </ng-template>
+        <div class="row">
+            <div class="col-100">
+                <div class="input-box">
+                    <!-- <label for="search">Search</label> -->
+                    <input type="text" (keyup)="onSearchKeyup($event)">
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="row cardContainer">
 
-    <div class="col-3 productCards " style="border: 1px solid black;">
-        <a routerLink="/productDetails/productListing">Books</a>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-3 productCards" style="border: 1px solid black;">
-        <a href="">Sports</a>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-3 productCards" style="border: 1px solid black;">
-        <a href="">Electronics</a>
-    </div>
-
-</div>
-
-<div class="row cardContainer">
-
-    <div class="col-3 productCards" style="border: 1px solid black;">
-        <a href="">Health & Beauty</a>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-3 productCards" style="border: 1px solid black;">
-        <a href="">Toys</a>
-    </div>
-    <div class="col-1"></div>
-    <div class="col-3 productCards" style="border: 1px solid black;">
-        <a href="">Home & Garden</a>
-    </div>
-
-</div>
+<router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http'
-import { catchError, Observable, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { ProductsModule } from '../products/products.module';
 
 @Injectable({
@@ -12,12 +12,33 @@ export class EsnapService {
 
   constructor(private http: HttpClient) { }
 
-  getProductlist(): Observable<ProductsModule[]> {
-    return this.http.get<ProductsModule[]>(this.url).pipe(catchError(this.errorhandler))
+  getProductlist(): Observable<any> {
+    return this.http.get<any>(this.url).pipe(catchError(this.errorhandler))
   }
 
   errorhandler(error: HttpErrorResponse) {
     return throwError(() => error.message || 'server error');
+  }
+
+  getBooklist(value: any) {
+
+    const url = 'https://www.googleapis.com/books/v1/volumes'
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append('q', value);
+
+    return this.http.get(url, { params: queryParams })
+      .pipe(
+        map((result) => {
+          // console.log(result);
+          // let returnData = result.items;
+          return result;
+        }));
+
+  }
+
+  
+  getAllBooks(): Observable<any> {
+    return this.http.get('https://www.googleapis.com/auth/books')
   }
 
 }
