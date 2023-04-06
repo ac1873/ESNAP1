@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataStoreService } from 'src/app/services/data-store.service';
 
@@ -12,7 +13,7 @@ export class SearchResultDashboardComponent implements OnInit {
   list$: any;
   searchData: any;
   dataList: any;
-  constructor(private dataStore: DataStoreService) {
+  constructor(private dataStore: DataStoreService, private router: Router) {
 
   }
 
@@ -45,6 +46,13 @@ export class SearchResultDashboardComponent implements OnInit {
       // this.dataList = [{}];
 
     })
+  }
+
+  itemSelected(item: any) {
+
+    this.dataStore.setselectedData(item);
+    this.router.navigate(['dashboard/itemDetails']);
+
   }
 
 }

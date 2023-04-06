@@ -1,7 +1,7 @@
 <div class="row">
 
-    <div class="col-12 productListing" style="border: 1px solid black;" *ngFor="let item of dataList">
-        <b><a routerLink="/productDetails">{{item.title}}</a></b>
+    <div (click)='itemSelected(item)' class="col-12 productListing" style="border: 1px solid black;" *ngFor="let item of dataList">
+        <b>{{item.title}}</b>
         <div class="col-3">
             <div class="itemImageBox" style="border: 1px solid black;">
                 <img src={{item.image}} />
