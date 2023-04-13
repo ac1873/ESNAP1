@@ -10,6 +10,8 @@ import { DataStoreService } from './services/data-store.service';
 export class AppComponent implements OnInit {
 
   loginStatus: boolean = false;
+  year: number;
+  
 
   constructor(private router: Router, private dataStore: DataStoreService) {
 
@@ -18,6 +20,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // throw new Error('Method not implemented.');
     this.loginStatus = this.dataStore.getLoginStatus();
+
+    this.year = (new Date()).getFullYear();
 
   }
   title = 'EsnapProject';

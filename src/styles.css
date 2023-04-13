@@ -175,3 +175,7 @@ body {
 .nav-background {
     background-color: #394a97;
 }
+
+a :hover {
+    color: white;
+}
