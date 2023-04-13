@@ -32,8 +32,10 @@ export class SearchResultDashboardComponent implements OnInit {
             this.dataList.push(
               {
                 id: this.searchData[i].id,
-                title: this.searchData[i].volumeInfo.title,
-                image: this.searchData[i].volumeInfo.imageLinks.thumbnail
+                title: this.searchData[i].volumeInfo?.title,
+                image: this.searchData[i].volumeInfo?.imageLinks?.thumbnail,
+                description: this.searchData[i].volumeInfo?.description,
+                price: Math.floor(Math.random() * 10)
               }
             )
           }

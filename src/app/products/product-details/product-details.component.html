@@ -4,8 +4,33 @@
         <img src={{selectedItem.image}} />
     </div>
     <div class="col-8 prodDescription">
-        {{selectedItem.title}}
+        <div class="row">
+            <b>{{selectedItem.title}}</b>
+        </div>
+
+        <div class="row productDescription">
+            <div class="">
+                <p>
+                    {{selectedItem.description}}
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <b>Price :{{selectedItem.price}}</b>
+        </div>
+
+        <div class="row">
+            <div *ngIf='selectedItem != []' class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit" (click)="addToCart()" class="btn btn-secondary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Add to Cart</button>
+                <button type="submit" (click)="buyNow()" class="btn btn-warning btn-lg" style="margin-left: 2rem; padding-left: 2.5rem; padding-right: 2.5rem;">Buy Now</button>
+
+            </div>
+        </div>
+
     </div>
+
+
 
 
 </div>

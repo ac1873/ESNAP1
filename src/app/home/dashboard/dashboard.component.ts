@@ -39,7 +39,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.keyUpSubject.pipe(debounceTime(1000), distinctUntilChanged()).subscribe((val) => {
+    this.keyUpSubject.pipe(debounceTime(800), distinctUntilChanged()).subscribe((val) => {
       this.onChangeSearch(val)
     }
     )
@@ -70,18 +70,7 @@ export class DashboardComponent implements OnInit {
         this.dataStore.setSearchData(this.data);
         this.router.navigate(['dashboard/searchresult']);
 
-        //   this.data = [{}];
-        //   if (responseData) {
-        //     for (let i = 0; i < responseData['items'].length; i++) {
-        //       this.data.push(
-        //         {
-        //           id: responseData.items[i].id,
-        //           title: responseData.items[i].volumeInfo.title,
-        //           image: responseData.items[i].volumeInfo.imageLinks.thumbnail
-        //         }
-        //       )
-        //     }
-        //   }
+       
       }
       )
 

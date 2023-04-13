@@ -14,7 +14,7 @@ import { SearchResultDashboardComponent } from './search-result-dashboard/search
   declarations: [
     DashboardComponent,
     TilesDashboardComponent,
-    SearchResultDashboardComponent
+    SearchResultDashboardComponent,
   ],
   imports: [
     CommonModule,

@@ -54,7 +54,9 @@
     min-height: 100px;
     /* box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5); */
     border-radius: 7px;
-    margin-top: 7px;
+    /* margin-top: 7px; */
+    margin-bottom: 3px;
+    box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .itemImageBox {
@@ -84,12 +86,12 @@ img {
 header {
     text-align: center;
     /* min-height: 70px; */
-    padding: 20px;
+    padding: 5px;
     background-color: hsl(206deg 100% 28.19%);
 }
 
 .container {
-    min-height: calc(100vh - 72px - 94px);
+    min-height: calc(100vh - 52px - 94px);
     background-color: rgb(235 248 255);
     position: relative;
     /* min-height: 100vh; */
@@ -123,4 +125,53 @@ body {
     margin: 0;
     height: 100%;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: rgb(210, 210, 209);
+}
+
+.productDescription {
+    padding: 15px 0px 20px 0px;
+}
+
+.cart {
+    position: absolute;
+    right: 0;
+}
+
+.myCart {
+    text-align: center;
+}
+
+
+/* .listContent {
+    padding-left: 12px;
+    padding-right: 12px;
+} */
+
+.listContainer {
+    margin-top: 7px;
+}
+
+.priceCol {
+    text-align: right;
+}
+
+.rowTotPrice {
+    text-align: right;
+}
+
+.formPosition {
+    margin-top: 55px;
+}
+
+.signUp {
+    max-height: 400px;
+}
+
+
+/* .cartButton{
+    align
+} */
+
+.nav-background {
+    background-color: #394a97;
 }

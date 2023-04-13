@@ -1,0 +1,30 @@
+<div class="row listContent">
+    <div class="justify-content-center myCart align-items-center col-lg-12">
+        <b>My Cart</b>
+    </div>
+    <div class="listContainer">
+        <div class="col-12 productListing" style="border: 1px solid black;" *ngFor="let item of cartList">
+            <b>{{item.title}}</b>
+            <div class="col-3">
+                <div class="itemImageBox" style="border: 1px solid black;">
+                    <img src={{item.image}} />
+                </div>
+
+            </div>
+            <b>Price :£{{item.price}}</b>
+
+        </div>
+        <div class="row rowTotPrice">
+            <div class="totaPrice">
+                <b>Total Price :£{{totalPrice}}</b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7 offset-5">
+                <button type="submit" (click)="proceedCheckout()" class="btn btn-warning btn-lg">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

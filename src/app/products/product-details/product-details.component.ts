@@ -21,30 +21,21 @@ export class ProductDetailsComponent {
       this.selectedItem = response;
       console.log('Inside Details :');
       console.log(this.selectedItem);
-      // this.dataList = [];
-      // if (this.searchData == 'No items to display') {
-      //   this.dataList = [];
-      // } else {
 
-      //   if (data) {
-      //     for (let i = 0; i < this.searchData.length; i++) {
-      //       this.dataList.push(
-      //         {
-      //           id: this.searchData[i].id,
-      //           title: this.searchData[i].volumeInfo.title,
-      //           image: this.searchData[i].volumeInfo.imageLinks.thumbnail
-      //         }
-      //       )
-      //     }
-      //     console.log('After Modification :');
-      //     console.log(this.dataList);
-      //   }
-
-      // }
-
-      // this.dataList = [{}];
 
     })
+  }
+
+  buyNow() {
+
+  }
+
+  addToCart() {
+    this.dataStore.addToCart(this.selectedItem);
+  }
+
+  clearCart() {
+    this.dataStore.addToCart(this.selectedItem);
   }
 
 }

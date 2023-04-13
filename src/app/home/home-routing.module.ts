@@ -4,6 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SearchResultDashboardComponent } from './search-result-dashboard/search-result-dashboard.component';
 import { TilesDashboardComponent } from './tiles-dashboard/tiles-dashboard.component';
 import { ProductDetailsComponent } from '../products/product-details/product-details.component';
+import { CartComponent } from '../check-out/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,8 @@ const routes: Routes = [
     children: [
       { path: '', component: TilesDashboardComponent },
       { path: 'searchresult', component: SearchResultDashboardComponent },
-      { path: 'itemDetails', component: ProductDetailsComponent }
-
+      { path: 'itemDetails', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
     ]
   },
 
