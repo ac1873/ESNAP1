@@ -1,5 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
 .divider:after,
 .divider:before {
     content: "";
@@ -13,17 +11,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* .h-custom {
-    height: calc(100% - 105px);
-}
-
-@media (max-width: 450px) {
-    .h-custom {
-        height: 100%;
-    }
-} */
 
 .searchbar {
     text-align: center;
@@ -44,17 +31,10 @@
     border-radius: 7px;
 }
 
-
-/* .content1 {
-    padding: 15px;
-} */
-
 .productListing {
     text-align: center;
     min-height: 100px;
-    /* box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.5); */
     border-radius: 7px;
-    /* margin-top: 7px; */
     margin-bottom: 3px;
     box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.5);
 }
@@ -85,7 +65,6 @@ img {
 
 header {
     text-align: center;
-    /* min-height: 70px; */
     padding: 5px;
     background-color: hsl(206deg 100% 28.19%);
 }
@@ -94,16 +73,7 @@ header {
     min-height: calc(100vh - 52px - 94px);
     background-color: rgb(235 248 255);
     position: relative;
-    /* min-height: 100vh; */
 }
-
-
-/* .content {
-    overflow: auto;
-    padding-bottom: 100px;
-    height: 100%;
-    background-color: rgb(248 248 245);
-} */
 
 .footer {
     /* height: 100px; */
@@ -141,12 +111,6 @@ body {
     text-align: center;
 }
 
-
-/* .listContent {
-    padding-left: 12px;
-    padding-right: 12px;
-} */
-
 .listContainer {
     margin-top: 7px;
 }
@@ -166,11 +130,6 @@ body {
 .signUp {
     max-height: 400px;
 }
-
-
-/* .cartButton{
-    align
-} */
 
 .nav-background {
     background-color: #394a97;

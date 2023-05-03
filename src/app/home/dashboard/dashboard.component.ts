@@ -12,26 +12,7 @@ import { EsnapService } from 'src/app/services/esnap.service';
 export class DashboardComponent implements OnInit {
   keyword = 'title';
   data: any[];
-  // data = [
-  //   {
-  //     id: '01',
-  //     title: 'test1',
-  //     image: 'qqqqqqqqq'
-  //   },
-  //   {
-  //     id: '02',
-  //     title: 'test2',
-  //     image: 'qqqqqqqqq'
-  //   },
-  //   {
-  //     id: '02',
-  //     title: 'abc',
-  //     image: 'qqqqqqqqq'
-  //   }
-  // ]
   private keyUpSubject = new Subject<any>();
-  // bookList$: any;
-
 
   constructor(private service: EsnapService, private router: Router, private dataStore: DataStoreService) {
 
@@ -52,15 +33,14 @@ export class DashboardComponent implements OnInit {
   }
 
   selectEvent(item: any) {
-    // do something with selected item
+    // route to product details page
     let x = item;
     this.router.navigate(['/productDetails/productListing']);
   }
 
   onChangeSearch(val: any) {
     // fetch remote data from here
-    // And reassign the 'data' which is binded to 'data' property.
-
+    //call book list API
     this.service.getBooklist(val)
       .subscribe(response => {
         let responseData: any;
@@ -73,14 +53,9 @@ export class DashboardComponent implements OnInit {
        
       }
       )
-
-    console.log(this.data);
-
   }
 
-  onFocused(e: any) {
-    // do something when input is focused
-  }
+ 
 
   autoCompleteClose() {
     this.data = [];
