@@ -29,14 +29,19 @@ export class EsnapService {
     return this.http.get(url, { params: queryParams })
       .pipe(
         map((result) => {
-          // console.log(result);
-          // let returnData = result.items;
           return result;
-        }));
+        }),
+        catchError((error) => {
+          console.error(error)
+          return throwError(() => new Error('Error'))
+        })
+      );
+
+
 
   }
 
-  
+
   getAllBooks(): Observable<any> {
     return this.http.get('https://www.googleapis.com/auth/books')
   }
